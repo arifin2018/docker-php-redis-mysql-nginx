@@ -50,13 +50,9 @@ services:
      - my-data:/data
     networks:
      - net
-    # environment:
-    #  - REDIS_HOST= cache
-    #  - REDIS_PORT= 6379
-    #  - REDIS_PASSWORD= REDIS_PASSWORD
 volumes:
   my-data:
 
 networks:
   net:
-    name: net
+    driver: "bridge"
