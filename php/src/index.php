@@ -10,7 +10,7 @@ try {
         'port'      => 6379,
         'password'  => 'REDIS_PASSWORD'
     ]);
-    $redis->set('name', 'Wai Yan Hein');
+    // $redis->set('name', 'Wai Yan Hein', 'EX', 500);
     echo $redis->get('name') . PHP_EOL;
 } catch (Exception $e) {
     echo $e->getMessage() . PHP_EOL;
