@@ -6,6 +6,7 @@ $connection = GetConnection();
 
 $xml = <<<XML
 INSERT INTO customers (id, name, email) VALUES (2,'azriel','azriel')
+INSERT INTO admin (id, name, email) VALUES (2,'azriel','azriel')
 XML;
 
 $connection->exec($xml);
