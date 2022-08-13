@@ -5,8 +5,15 @@ $connection = GetConnection();
 
 $username   = $connection->quote('admin');
 $password   = $connection->quote('admin');
-// $username   = "admin'; #";
-// $password   = 'admin';
+
+/*
+
+    Sql injection
+$username   = "admin'; #";
+$password   = 'admin';
+
+*/
+
 $sql        = "SELECT * FROM admin WHERE name = $username AND password = $password";
 
 $statment = $connection->query($sql);
